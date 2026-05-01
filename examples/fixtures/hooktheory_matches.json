@@ -1,0 +1,42 @@
+{
+  "II-V-I": [
+    {
+      "song_id": "autumn-leaves",
+      "title": "Autumn Leaves",
+      "artist": "Joseph Kosma",
+      "section": "A section",
+      "matched_progression": "ii-V-I"
+    },
+    {
+      "song_id": "blue-bossa",
+      "title": "Blue Bossa",
+      "artist": "Kenny Dorham",
+      "section": "A section",
+      "matched_progression": "ii-V-I"
+    },
+    {
+      "song_id": "tune-up",
+      "title": "Tune Up",
+      "artist": "Miles Davis",
+      "section": "Bridge",
+      "matched_progression": "ii-V-I"
+    }
+  ],
+  "I-VI-II-V": [
+    {
+      "song_id": "heart-and-soul",
+      "title": "Heart and Soul",
+      "artist": "Hoagy Carmichael",
+      "section": "Verse",
+      "matched_progression": "I-vi-ii-V"
+    },
+    {
+      "song_id": "blue-moon",
+      "title": "Blue Moon",
+      "artist": "Richard Rodgers",
+      "section": "A section",
+      "matched_progression": "I-vi-ii-V"
+    }
+  ]
+}
+

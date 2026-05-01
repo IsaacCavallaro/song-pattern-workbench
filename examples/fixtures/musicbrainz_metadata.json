@@ -1,0 +1,33 @@
+{
+  "autumn-leaves": {
+    "work_title": "Autumn Leaves",
+    "artist_credit": "Joseph Kosma",
+    "tags": ["jazz standard", "swing"],
+    "year": 1945
+  },
+  "blue-bossa": {
+    "work_title": "Blue Bossa",
+    "artist_credit": "Kenny Dorham",
+    "tags": ["bossa nova", "jazz standard"],
+    "year": 1963
+  },
+  "tune-up": {
+    "work_title": "Tune Up",
+    "artist_credit": "Miles Davis",
+    "tags": ["jazz standard", "bebop"],
+    "year": 1954
+  },
+  "heart-and-soul": {
+    "work_title": "Heart and Soul",
+    "artist_credit": "Hoagy Carmichael",
+    "tags": ["standard", "pop"],
+    "year": 1938
+  },
+  "blue-moon": {
+    "work_title": "Blue Moon",
+    "artist_credit": "Richard Rodgers",
+    "tags": ["standard", "ballad"],
+    "year": 1934
+  }
+}
+

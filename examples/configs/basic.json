@@ -1,0 +1,26 @@
+{
+  "cache_dir": "../../.cache/song-pattern-workbench",
+  "report_dir": "../../reports/basic",
+  "default_limit": 10,
+  "providers": {
+    "hooktheory": {
+      "type": "fixture",
+      "path": "../fixtures/hooktheory_matches.json"
+    },
+    "musicbrainz": {
+      "type": "fixture",
+      "path": "../fixtures/musicbrainz_metadata.json"
+    }
+  },
+  "queries": [
+    {
+      "pattern": "ii-V-I",
+      "expected_titles": ["Autumn Leaves", "Blue Bossa", "Tune Up"]
+    },
+    {
+      "pattern": "I-vi-ii-V",
+      "expected_titles": ["Heart and Soul", "Blue Moon"]
+    }
+  ]
+}
+
