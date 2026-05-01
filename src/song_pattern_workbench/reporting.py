@@ -29,6 +29,7 @@ def _search_summary(run: SearchRun) -> str:
         f"- Query: `{run.pattern}`",
         f"- Normalized: `{run.normalized_pattern}`",
         f"- Cache hit: `{str(run.cache_hit).lower()}`",
+        f"- Cache namespace: `{run.cache_namespace}`",
         f"- Results: `{len(run.results)}`",
         "",
         "## Matches",
@@ -60,4 +61,3 @@ def _eval_summary(payload: dict[str, object]) -> str:
             f"{len(case['expected_titles'])} expected titles"
         )
     return "\n".join(lines) + "\n"
-

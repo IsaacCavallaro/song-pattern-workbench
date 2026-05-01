@@ -2,11 +2,16 @@ from __future__ import annotations
 
 import json
 import os
+import socket
 import urllib.parse
+import urllib.error
 import urllib.request
 from pathlib import Path
 
 from song_pattern_workbench.models import SearchHit
+
+
+DEFAULT_TIMEOUT_SECONDS = 10
 
 
 class FixturePatternClient:
@@ -70,6 +75,9 @@ class MusicBrainzLookupClient:
             hit.metadata = {}
             return hit
         recording = recordings[0]
+        if not _is_reasonable_musicbrainz_match(hit, recording):
+            hit.metadata = {}
+            return hit
         artist_credit = recording.get("artist-credit", [])
         hit.metadata = {
             "musicbrainz_recording_id": recording.get("id"),
@@ -119,5 +127,39 @@ def _load_json(url: str, token_env: str | None) -> dict[str, object]:
             raise ValueError(f"Missing required token env var: {token_env}")
         headers["Authorization"] = f"Bearer {token}"
     request = urllib.request.Request(url, headers=headers)
-    with urllib.request.urlopen(request) as response:
-        return json.loads(response.read().decode("utf-8"))
+    try:
+        with urllib.request.urlopen(request, timeout=DEFAULT_TIMEOUT_SECONDS) as response:
+            return json.loads(response.read().decode("utf-8"))
+    except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, socket.timeout) as exc:
+        raise RuntimeError(f"Request failed for {url}: {exc}") from exc
+
+
+def provider_signature(config: dict[str, object]) -> str:
+    provider_type = str(config.get("type", "unknown"))
+    parts = [provider_type]
+    if "path" in config:
+        parts.append(f"path={config['path']}")
+    if "endpoint_template" in config:
+        parts.append(f"endpoint={config['endpoint_template']}")
+    if "token_env" in config:
+        parts.append(f"token_env={config['token_env']}")
+    return "|".join(parts)
+
+
+def _is_reasonable_musicbrainz_match(hit: SearchHit, recording: dict[str, object]) -> bool:
+    title = str(recording.get("title", "")).strip().casefold()
+    if title != hit.title.strip().casefold():
+        return False
+
+    score = recording.get("score")
+    if isinstance(score, int) and score < 90:
+        return False
+
+    artist_credit = recording.get("artist-credit", [])
+    names = [
+        str(item.get("name", "")).strip().casefold()
+        for item in artist_credit
+        if isinstance(item, dict)
+    ]
+    expected_artist = hit.artist.strip().casefold()
+    return expected_artist in names

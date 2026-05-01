@@ -22,12 +22,14 @@ class SearchRun:
     normalized_pattern: str
     results: list[SearchHit]
     cache_hit: bool
+    cache_namespace: str
 
     def to_dict(self) -> dict[str, object]:
         return {
             "pattern": self.pattern,
             "normalized_pattern": self.normalized_pattern,
             "cache_hit": self.cache_hit,
+            "cache_namespace": self.cache_namespace,
             "results": [item.to_dict() for item in self.results],
         }
 
@@ -43,4 +45,3 @@ class EvalCaseResult:
 
     def to_dict(self) -> dict[str, object]:
         return asdict(self)
-

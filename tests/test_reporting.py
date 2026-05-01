@@ -10,6 +10,7 @@ class ReportingTests(unittest.TestCase):
             pattern="ii-V-I",
             normalized_pattern="II-V-I",
             cache_hit=False,
+            cache_namespace="search::fixture",
             results=[
                 SearchHit(
                     song_id="autumn-leaves",
@@ -22,6 +23,7 @@ class ReportingTests(unittest.TestCase):
         summary = _search_summary(run)
         self.assertIn("Autumn Leaves", summary)
         self.assertIn("II-V-I", summary)
+        self.assertIn("search::fixture", summary)
 
 
 if __name__ == "__main__":

@@ -1,4 +1,5 @@
 import unittest
+from copy import deepcopy
 from pathlib import Path
 
 from song_pattern_workbench.config import load_config
@@ -30,6 +31,24 @@ class SearchTests(unittest.TestCase):
         run_search(self.config, "ii-V-I")
         cached = run_search(self.config, "ii-V-I")
         self.assertTrue(cached.cache_hit)
+
+    def test_cache_isolated_by_provider_configuration(self) -> None:
+        run_search(self.config, "ii-V-I")
+        alt_config = deepcopy(self.config)
+        alt_config["providers"]["musicbrainz"] = {
+            "type": "fixture",
+            "path": str(
+                Path(self.config["providers"]["musicbrainz"]["path"]).with_name(
+                    "hooktheory_matches.json"
+                )
+            ),
+        }
+        fresh = run_search(alt_config, "ii-V-I")
+        self.assertFalse(fresh.cache_hit)
+        self.assertNotEqual(
+            run_search(self.config, "ii-V-I").cache_namespace,
+            fresh.cache_namespace,
+        )
 
 
 if __name__ == "__main__":
