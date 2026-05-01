@@ -4,11 +4,24 @@
 
 It is built around a simple idea:
 
-- normalize a query like `ii-V-I`
-- retrieve matching songs from a music-pattern source
-- enrich those matches with catalog metadata
-- cache results for repeatability
-- evaluate whether known queries return the expected tunes
+```text
+query like "ii-V-I"
+        |
+        v
+normalize harmonic pattern
+        |
+        v
+retrieve matching songs from a pattern source
+        |
+        v
+enrich matches with catalog metadata
+        |
+        v
+cache results for repeatable runs
+        |
+        v
+evaluate expected matches and write reports
+```
 
 The repo is intentionally scoped to harmonic search first. It supports offline fixtures for deterministic testing and a config-driven API mode for real providers.
 
