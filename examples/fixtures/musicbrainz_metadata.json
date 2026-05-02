@@ -17,6 +17,48 @@
     "tags": ["jazz standard", "bebop"],
     "year": 1954
   },
+  "there-will-never-be-another-you": {
+    "work_title": "There Will Never Be Another You",
+    "artist_credit": "Harry Warren",
+    "tags": ["jazz standard", "swing"],
+    "year": 1942
+  },
+  "all-the-things-you-are": {
+    "work_title": "All the Things You Are",
+    "artist_credit": "Jerome Kern",
+    "tags": ["jazz standard", "broadway"],
+    "year": 1939
+  },
+  "satin-doll": {
+    "work_title": "Satin Doll",
+    "artist_credit": "Duke Ellington",
+    "tags": ["jazz standard", "swing"],
+    "year": 1953
+  },
+  "solar": {
+    "work_title": "Solar",
+    "artist_credit": "Miles Davis",
+    "tags": ["jazz standard", "hard bop"],
+    "year": 1954
+  },
+  "have-you-met-miss-jones": {
+    "work_title": "Have You Met Miss Jones",
+    "artist_credit": "Richard Rodgers",
+    "tags": ["jazz standard", "show tune"],
+    "year": 1937
+  },
+  "just-friends": {
+    "work_title": "Just Friends",
+    "artist_credit": "John Klenner",
+    "tags": ["jazz standard", "ballad"],
+    "year": 1931
+  },
+  "stella-by-starlight": {
+    "work_title": "Stella by Starlight",
+    "artist_credit": "Victor Young",
+    "tags": ["jazz standard", "ballad"],
+    "year": 1944
+  },
   "heart-and-soul": {
     "work_title": "Heart and Soul",
     "artist_credit": "Hoagy Carmichael",
@@ -28,6 +70,35 @@
     "artist_credit": "Richard Rodgers",
     "tags": ["standard", "ballad"],
     "year": 1934
+  },
+  "i-got-rhythm": {
+    "work_title": "I Got Rhythm",
+    "artist_credit": "George Gershwin",
+    "tags": ["standard", "swing"],
+    "year": 1930
+  },
+  "honeysuckle-rose": {
+    "work_title": "Honeysuckle Rose",
+    "artist_credit": "Fats Waller",
+    "tags": ["standard", "stride piano"],
+    "year": 1929
+  },
+  "aint-misbehavin": {
+    "work_title": "Ain't Misbehavin'",
+    "artist_credit": "Fats Waller",
+    "tags": ["standard", "swing"],
+    "year": 1929
+  },
+  "i-cant-give-you-anything-but-love": {
+    "work_title": "I Can't Give You Anything but Love",
+    "artist_credit": "Jimmy McHugh",
+    "tags": ["standard", "swing"],
+    "year": 1928
+  },
+  "exactly-like-you": {
+    "work_title": "Exactly Like You",
+    "artist_credit": "Jimmy McHugh",
+    "tags": ["standard", "jazz standard"],
+    "year": 1930
   }
 }
-

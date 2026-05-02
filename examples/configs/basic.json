@@ -1,7 +1,7 @@
 {
   "cache_dir": "../../.cache/song-pattern-workbench",
   "report_dir": "../../reports/basic",
-  "default_limit": 10,
+  "default_limit": 25,
   "providers": {
     "hooktheory": {
       "type": "fixture",
@@ -12,15 +12,38 @@
       "path": "../fixtures/musicbrainz_metadata.json"
     }
   },
+  "assistant": {
+    "type": "fixture",
+    "path": "../fixtures/assistant_answers.json"
+  },
   "queries": [
     {
       "pattern": "ii-V-I",
-      "expected_titles": ["Autumn Leaves", "Blue Bossa", "Tune Up"]
+      "expected_titles": [
+        "Autumn Leaves",
+        "Blue Bossa",
+        "Tune Up",
+        "There Will Never Be Another You",
+        "All the Things You Are",
+        "Satin Doll",
+        "Solar",
+        "Have You Met Miss Jones",
+        "Just Friends",
+        "Stella by Starlight"
+      ]
     },
     {
       "pattern": "I-vi-ii-V",
-      "expected_titles": ["Heart and Soul", "Blue Moon"]
+      "expected_titles": [
+        "Heart and Soul",
+        "Blue Moon",
+        "I Got Rhythm",
+        "Honeysuckle Rose",
+        "Ain't Misbehavin'",
+        "I Can't Give You Anything but Love",
+        "Exactly Like You",
+        "Satin Doll"
+      ]
     }
   ]
 }
-

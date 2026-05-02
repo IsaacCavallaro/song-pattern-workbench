@@ -20,6 +20,55 @@
       "artist": "Miles Davis",
       "section": "Bridge",
       "matched_progression": "ii-V-I"
+    },
+    {
+      "song_id": "there-will-never-be-another-you",
+      "title": "There Will Never Be Another You",
+      "artist": "Harry Warren",
+      "section": "A section",
+      "matched_progression": "ii-V-I"
+    },
+    {
+      "song_id": "all-the-things-you-are",
+      "title": "All the Things You Are",
+      "artist": "Jerome Kern",
+      "section": "B section",
+      "matched_progression": "ii-V-I"
+    },
+    {
+      "song_id": "satin-doll",
+      "title": "Satin Doll",
+      "artist": "Duke Ellington",
+      "section": "A section",
+      "matched_progression": "ii-V-I"
+    },
+    {
+      "song_id": "solar",
+      "title": "Solar",
+      "artist": "Miles Davis",
+      "section": "Turnaround",
+      "matched_progression": "ii-V-I"
+    },
+    {
+      "song_id": "have-you-met-miss-jones",
+      "title": "Have You Met Miss Jones",
+      "artist": "Richard Rodgers",
+      "section": "Bridge",
+      "matched_progression": "ii-V-I"
+    },
+    {
+      "song_id": "just-friends",
+      "title": "Just Friends",
+      "artist": "John Klenner",
+      "section": "A section",
+      "matched_progression": "ii-V-I"
+    },
+    {
+      "song_id": "stella-by-starlight",
+      "title": "Stella by Starlight",
+      "artist": "Victor Young",
+      "section": "A section",
+      "matched_progression": "ii-V-I"
     }
   ],
   "I-VI-II-V": [
@@ -36,7 +85,48 @@
       "artist": "Richard Rodgers",
       "section": "A section",
       "matched_progression": "I-vi-ii-V"
+    },
+    {
+      "song_id": "i-got-rhythm",
+      "title": "I Got Rhythm",
+      "artist": "George Gershwin",
+      "section": "A section",
+      "matched_progression": "I-vi-ii-V"
+    },
+    {
+      "song_id": "honeysuckle-rose",
+      "title": "Honeysuckle Rose",
+      "artist": "Fats Waller",
+      "section": "A section",
+      "matched_progression": "I-vi-ii-V"
+    },
+    {
+      "song_id": "aint-misbehavin",
+      "title": "Ain't Misbehavin'",
+      "artist": "Fats Waller",
+      "section": "A section",
+      "matched_progression": "I-vi-ii-V"
+    },
+    {
+      "song_id": "i-cant-give-you-anything-but-love",
+      "title": "I Can't Give You Anything but Love",
+      "artist": "Jimmy McHugh",
+      "section": "A section",
+      "matched_progression": "I-vi-ii-V"
+    },
+    {
+      "song_id": "exactly-like-you",
+      "title": "Exactly Like You",
+      "artist": "Jimmy McHugh",
+      "section": "A section",
+      "matched_progression": "I-vi-ii-V"
+    },
+    {
+      "song_id": "satin-doll",
+      "title": "Satin Doll",
+      "artist": "Duke Ellington",
+      "section": "Turnaround",
+      "matched_progression": "I-vi-ii-V"
     }
   ]
 }
-

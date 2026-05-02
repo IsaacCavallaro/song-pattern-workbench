@@ -4,13 +4,21 @@
   "default_limit": 10,
   "providers": {
     "hooktheory": {
-      "type": "api",
-      "endpoint_template": "https://provider.example/search?pattern={pattern}&limit={limit}",
-      "token_env": "HOOKTHEORY_API_TOKEN"
+      "type": "hooktheory_api",
+      "base_url": "https://api.hooktheory.com/v1",
+      "username_env": "HOOKTHEORY_USERNAME",
+      "password_env": "HOOKTHEORY_PASSWORD"
     },
     "musicbrainz": {
       "type": "musicbrainz_lookup"
     }
+  },
+  "assistant": {
+    "type": "openai_compatible",
+    "base_url": "https://api.openai.com/v1",
+    "model": "gpt-4.1-mini",
+    "api_key_env": "OPENAI_API_KEY",
+    "system_prompt": "Answer using only the retrieved matches and metadata."
   },
   "queries": [
     {

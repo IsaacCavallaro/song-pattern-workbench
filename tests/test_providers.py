@@ -1,7 +1,11 @@
 import unittest
 
 from song_pattern_workbench.models import SearchHit
-from song_pattern_workbench.providers import _is_reasonable_musicbrainz_match, provider_signature
+from song_pattern_workbench.providers import (
+    _hooktheory_child_path,
+    _is_reasonable_musicbrainz_match,
+    provider_signature,
+)
 
 
 class ProviderTests(unittest.TestCase):
@@ -38,6 +42,10 @@ class ProviderTests(unittest.TestCase):
         self.assertFalse(_is_reasonable_musicbrainz_match(hit, bad_title))
         self.assertFalse(_is_reasonable_musicbrainz_match(hit, bad_artist))
         self.assertFalse(_is_reasonable_musicbrainz_match(hit, bad_score))
+
+    def test_hooktheory_child_path_mapping(self) -> None:
+        self.assertEqual(_hooktheory_child_path("II-V-I"), "2,5,1")
+        self.assertEqual(_hooktheory_child_path("I-VI-II-V"), "1,6,2,5")
 
 
 if __name__ == "__main__":
